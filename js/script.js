@@ -52,7 +52,13 @@ createApp({
             if(this.slideNumber < 0) {
                 this.slideNumber = this.slides.length - 1;
             }
-        }
+        },
+
+        changeSlide(index) {
+
+            this.slideNumber = index;
+
+        },
 
     },
 
