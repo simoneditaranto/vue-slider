@@ -34,5 +34,26 @@ createApp({
            
             
         }
-    }
+    },
+
+    methods: {
+
+        nextSlide() {
+            this.slideNumber++;
+            // se supero il numero massimo di elementi, torno al primo elemento
+            if(this.slideNumber > this.slides.length - 1) {
+                this.slideNumber = 0;
+            }
+        },
+
+        prevSlide() {
+            this.slideNumber--;
+            // se supero il numero minimo di elementi, torno all'ultimo
+            if(this.slideNumber < 0) {
+                this.slideNumber = this.slides.length - 1;
+            }
+        }
+
+    },
+
 }).mount("#app");
