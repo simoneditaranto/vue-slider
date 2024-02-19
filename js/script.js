@@ -8,6 +8,10 @@ createApp({
             // memorizzo in una variabile l'indice della prima immagine
             slideNumber: 0,
 
+            interval: setInterval(() => {
+                this.nextSlide();
+            }, 3000),
+
             slides: [
                 {
                     image: 'img/01.webp',
