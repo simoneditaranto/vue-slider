@@ -63,7 +63,7 @@ createApp({
         autoPlay() {
             this.interval = setInterval(() => {
                 this.nextSlide();
-            }, 1000)
+            }, 3000)
 
             return this.interval;
         },
