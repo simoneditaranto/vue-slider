@@ -19,6 +19,8 @@
                 v-for="(currentImage, index) in slides" 
                 v-show="index == slideNumber"
                 class="item"
+                @mouseenter="stopAutoPlay()"
+                @mouseleave="autoPlay()"
                 >
                     <img :src="currentImage.image" alt="">
                     <div class="text">

@@ -8,9 +8,7 @@ createApp({
             // memorizzo in una variabile l'indice della prima immagine
             slideNumber: 0,
 
-            interval: setInterval(() => {
-                this.nextSlide();
-            }, 3000),
+            interval : this.autoPlay(),
 
             slides: [
                 {
@@ -59,9 +57,19 @@ createApp({
         },
 
         changeSlide(index) {
-
             this.slideNumber = index;
+        },
 
+        autoPlay() {
+            this.interval = setInterval(() => {
+                this.nextSlide();
+            }, 1000)
+
+            return this.interval;
+        },
+
+        stopAutoPlay() {
+            clearInterval(this.interval);
         },
 
     },
